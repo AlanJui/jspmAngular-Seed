@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-TW" ng-controller="MainCtrl as vm">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title ng-bind="pageTitle"></title>
+  <style type="text/css">
+    /**
+     * Hide when Angular is not yet loaded and initialized
+     */
+    [ng-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+<body ng-cloak>
+  <h1>{{vm.pageTitle}}</h1>
+  <div ui-view></div>
+
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('modules/main/main.module.js');
+  </script>
+</body>
+</html>
