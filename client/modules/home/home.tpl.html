@@ -1,9 +1,9 @@
-<h1>Home</h1>
-
-{{vm.title}}
+<header class="subheader">
+  <h1>{{vm.title}}</h1>
+</header>
 
 <div>
-  <ul ng-repeat="user in vm.users">
-    <li >{{user.name}}</li>
-  </ul>
+  <ol class="news" ng-repeat="user in vm.users">
+    <li class="news-item">{{user.name}}</li>
+  </ol>
 </div>

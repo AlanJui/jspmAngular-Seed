@@ -14,8 +14,17 @@
   </style>
 </head>
 <body ng-cloak ng-controller="MainCtrl as vm">
-  <h1>{{vm.pageTitle}}</h1>
-  <div ui-view></div>
+  <header class="hero">
+    <div class="container">
+      <p class="logo">{{vm.pageTitle}}</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <div ui-view></div>
+    </div>
+  </main>
 
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>

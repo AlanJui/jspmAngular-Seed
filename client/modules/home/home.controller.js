@@ -3,7 +3,7 @@ export default class HomeCtrl {
 	/*@ngInject*/
 	constructor(UsersService, $log) {
 		let self = this;
-		this.title = 'Testing home.controller';
+		this.title = '會員清單';
 
 		this.UsersService = UsersService;
 
