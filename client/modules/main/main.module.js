@@ -1,16 +1,16 @@
-import angular from 'angular';
-import 'angular-ui-router';
+import {ExternalLogger} from '../../components/utils/log-decorator';
+let $log = new ExternalLogger();
+$log = $log.getInstance("BOOTSTRAP");
+$log.debug(`Configuraing 'main' module`);
 
-import MainConfig from './main.config';
 import MainCtrl from './main.controller';
 
-const main = angular
-	.module('Main', ['ui.router'])
-	.config(MainConfig)
-	.controller('MainCtrl', MainCtrl);
+let module = angular.module('Main', ['ui.router'])
 
-export default main;
+	.controller('MainCtrl', MainCtrl)
 
-angular.element(document).ready(function () {
-	return angular.bootstrap(document, [main.name]);
-});
+	.config(function ($urlRouterProvider) {
+		$urlRouterProvider.otherwise('/home');
+	});
+
+export default module;

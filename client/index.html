@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-TW" ng-controller="MainCtrl as vm">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,16 @@
     }
   </style>
 </head>
-<body ng-cloak>
+<body ng-cloak ng-controller="MainCtrl as vm">
   <h1>{{vm.pageTitle}}</h1>
   <div ui-view></div>
 
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
   <script>
-    System.import('modules/main/main.module.js');
+    System
+      .import('boot.js')
+      .catch(console.error.bind(console));
   </script>
 </body>
 </html>
