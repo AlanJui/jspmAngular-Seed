@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js",
-    "serve": "browser-sync start --files 'index.html, ./modules/**/*.tpl.html, style.css,  ./modules/**/*.js' --server './client'"
+    "start": "npm install && jspm install",
+    "serve-server": "nodemon server/server.js",
+    "serve-client": "browser-sync start --files 'index.html, ./modules/**/*.tpl.html, style.css,  ./modules/**/*.js' --server './client'"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,10 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "express": "^4.13.4",
-    "jspm": "^0.16.31"
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+    "jspm": "^0.16.31",
+    "wrench": "^1.5.8"
   },
   "jspm": {
     "directories": {

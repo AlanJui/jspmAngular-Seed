@@ -5,27 +5,38 @@
    * 使用 JSPM 管理 Client 端所需之 JavaScript Module
    * 使用 JSPM 管理 Client 端之 JavaScript 程式「打包」成單一檔案
 
+## 事前作業
+
+確定作業平台的環境，已安裝下列軟體:
+ 
+ * git
+ * node
+ * npm
+ * nodemon (以Global安裝)
+ * gulp (以Global安裝)
+
 ## 安裝作業
 
     ```
-    $ npm install
+    $ cd <工作區目錄>
     
-    $ jspm install
-    ```
-
-## 執行作業
-
-### 啟動 Client
-
-    ```
-    $ npm run serve
-    ```
-
-### 啟動 Server
-
-    ```
+    $ git clone git@github.com:AlanJui/jspmAngular-Seed.git
+    
+    $ cd jspmAngular-Seed
+    
     $ npm start
     ```
+
+## 開發作業
+
+ 1. 啟動 Web 
+
+    ```
+    $ gulp
+    ```
+
+ 2. 使用「瀏覽器」瀏覽網址: http://localhost:20080/
+
     
 ## 參考資訊
 
